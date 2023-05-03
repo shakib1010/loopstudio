@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "kumbh_sansextralight";
+  src: url("/fonts/kumbh-sans/kumbhsans-extralight-webfont.woff2")
+      format("woff2"),
+    url("/fonts/kumbh-sans/kumbhsans-extralight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "branchregular";
+  src: url("/fonts/branch/fontsfree-net-branch_1-webfont.woff2") format("woff2"),
+    url("/fonts/branch/fontsfree-net-branch_1-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "kumbh_sansextralight", sans-serif;
+}
+
+h1 {
+  font-family: "branchregular", serif;
+  text-transform: uppercase;
+  font-weight: lighter;
+}

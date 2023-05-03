@@ -13,6 +13,11 @@
   transform: translate(-50%, -50%);
 }
 
+%container {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone

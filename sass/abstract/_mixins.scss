@@ -13,9 +13,28 @@
   transform: translate(-50%, -50%);
 }
 
+@mixin disFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 %container {
-  max-width: 114rem;
+  max-width: 124rem;
   margin: 0 auto;
+}
+
+@mixin subtitle {
+  h2 {
+    line-height: 0.8;
+  }
+  p {
+    width: 330px;
+    text-align: start;
+    margin: 0 auto;
+    position: relative;
+    left: 25%;
+  }
 }
 
 // MEDIA QUERY MANAGER

@@ -1,3 +1,4 @@
+@use "../abstract/" as *;
 @font-face {
   font-family: "kumbh_sansextralight";
   src: url("/fonts/kumbh-sans/kumbhsans-extralight-webfont.woff2")
@@ -23,4 +24,33 @@ h1 {
   font-family: "branchregular", serif;
   text-transform: uppercase;
   font-weight: lighter;
+  color: $black;
+}
+
+h2 {
+  font-family: "branchregular", serif;
+  font-weight: lighter;
+  font-size: 9.6rem;
+  line-height: 1;
+  color: $black;
+}
+
+h3 {
+  font-family: "branchregular", serif;
+  font-weight: lighter;
+  font-size: 4rem;
+  line-height: 1;
+  color: $black;
+}
+
+p {
+  font-family: "kumbh_sansextralight", sans-serif;
+  font-weight: Light;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: $grey;
+}
+
+.hero__heading {
+  perspective: 600px;
 }

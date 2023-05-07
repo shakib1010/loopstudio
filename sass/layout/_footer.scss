@@ -1,0 +1,105 @@
+@use "../abstract/" as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $black;
+  gap: 20rem;
+  padding: 21rem 0 5rem 0;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__info-text {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    h1 {
+      text-align: start;
+      font-size: 6.4rem;
+      line-height: 1;
+      color: $white;
+    }
+
+    p {
+      position: absolute;
+      width: 45%;
+      line-height: 1;
+      bottom: 8%;
+      left: 45%;
+      font-size: 1.4rem;
+      color: $white;
+    }
+  }
+
+  &__email-box {
+    background-color: $white;
+    border-radius: 10px;
+    height: 4rem;
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+    align-items: center;
+    position: relative;
+  }
+
+  &__input {
+    position: absolute;
+    width: 80%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 2rem;
+    outline: none;
+  }
+
+  &__form-btn {
+    position: absolute;
+    z-index: 111;
+    right: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba($white, 0.7);
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+    img {
+      width: 60%;
+      height: 60%;
+    }
+  }
+
+  &__icon-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    p {
+      color: $white;
+    }
+  }
+
+  &__icons {
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

@@ -1,45 +1,50 @@
 @use "../abstract/" as *;
 
-$white: rgba(255, 255, 255, 0.3);
-
 .nav {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   padding: 1rem 2rem;
-  align-items: center;
-  background: $white;
-  opacity: 0.7;
-  backdrop-filter: blur(10px);
+  background-color: rgba($white, 0.7);
+  backdrop-filter: blur(30px);
   border-radius: 10px;
-  border-left: 1px solid $white;
-  border-top: 1px solid $white;
-  box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
-  position: relative;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.07);
+  align-items: center;
+  width: 80%;
+  left: 50%;
+  top: 2rem;
+  z-index: 999;
+  padding: 1.5rem 3rem;
+  transform: translate(-50%, 0);
 
   @include respond(tab-port) {
     flex-direction: column;
-    gap: 6rem;
+    gap: 1rem;
   }
 
   &__logo-box {
     z-index: 1;
-    align-self: flex-start;
+    line-height: 0;
+    @include respond(tab-port) {
+      align-self: flex-start;
+    }
   }
 
   &__logo {
-    //  todo - adjust the size if needed
+    height: 1.5rem;
   }
 
   &__list {
     z-index: 1;
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
 
     @include respond(tab-port) {
       flex-direction: column;
       padding: 2rem 0;
       display: none;
+      text-align: left;
     }
   }
 
@@ -48,38 +53,71 @@ $white: rgba(255, 255, 255, 0.3);
 
   &__link {
     text-decoration: none;
+    color: $black;
   }
 
   &__open-btn {
     line-height: 0;
     display: none;
+    width: 3.2rem;
+    height: 3.2rem;
+    cursor: pointer;
     @include respond(tab-port) {
       position: absolute;
-      top: 1rem;
-      right: 1rem;
+      top: 50%;
+      right: 2rem;
+      transform: translate(0, -50%);
     }
   }
 
   &__close-btn {
-    width: 32px;
-    height: 32px;
+    width: 3.2rem;
+    height: 3.2rem;
     display: none;
+    cursor: pointer;
     @include respond(tab-port) {
       position: absolute;
-      top: 1rem;
+      top: 0.5rem;
       right: 1rem;
     }
   }
 }
 
-.hide {
+.nav-show {
   @include respond(tab-port) {
+    display: block;
   }
-  display: saddam;
 }
 
-.show {
+.nav-hide {
   @include respond(tab-port) {
+    display: none;
   }
-  display: block;
+}
+
+.nav-list-show {
+  @include respond(tab-port) {
+    display: flex;
+  }
+}
+
+.nav-list-hide {
+  @include respond(tab-port) {
+    display: none;
+  }
+}
+
+.boltu {
+  position: absolute;
+  width: 5.5rem;
+  height: 5.5rem;
+  // background-color: red;
+  border-radius: 50%;
+  left: 50%;
+  top: 2rem;
+  transform: translate(-50%, 0);
+  // z-index: 9999999;
+  opacity: 0;
+  background-color: rgba($white, 0.7);
+  backdrop-filter: blur(30px);
 }

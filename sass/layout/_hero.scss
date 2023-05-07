@@ -15,11 +15,11 @@
     position: relative;
 
     h1 {
-      color: $text-color;
       font-size: 9.6rem;
       line-height: 1;
       span img {
         position: relative;
+        color: $black;
         left: -20%;
       }
     }

@@ -1,3 +1,4 @@
+@use "../abstract/" as *;
 .btn {
   font-family: "kumbh_sansextralight", sans-serif;
   font-weight: normal;
@@ -6,4 +7,16 @@
   border: none;
   border-bottom: 1px solid black;
   padding: 0 0.2rem 0.2rem 0;
+
+
+  &__primary{
+    font-family: "kumbh_sansextralight", sans-serif;
+    font-weight: normal;
+    font-size: 1.2rem;
+    border: none;
+    padding: 4rem;
+    display: block;
+    z-index: 444;
+  }
 }
+

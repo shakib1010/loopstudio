@@ -5,32 +5,71 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  //   line-height: 0.9;
-  //   flex-direction: column;
   padding: 21rem 0;
 
+  @include respond(phone) {
+    padding: 15rem 1rem 10rem 1rem;
+  }
+
   &__text-box {
-    // @include absCenter;
-    width: 60%;
     position: relative;
 
     h1 {
       font-size: 9.6rem;
       line-height: 1;
+
+      div:not(:last-child) {
+          @include respond(tab-port) {
+            margin-bottom: 1rem;
+          }
+      }
+
+      @include respond(tab-land) {
+        font-size: 7.5rem;
+        text-align: center;
+      }
+
+      @include respond(phone) {
+        font-size: 5rem;
+      }
+
       span img {
         position: relative;
-        color: $black;
         left: -20%;
+
+        @include respond(tab-land) {
+          height: 50px;
+        }
+
+        @include respond(tab-port) {
+          left: 0;
+          margin-bottom: 1rem;
+        }
+        
+        @include respond(phone) {
+          height: 30px;
+        }
       }
     }
   }
 
   &__para {
     position: absolute;
+    
     top: 43.5%;
     right: -10%;
     line-height: 1.2;
     width: 30%;
     font-size: 1.4rem;
+    @include respond(tab-land) {
+      right: -35%;
+      width: 50%;
+    }
+
+    @include respond(tab-port) {
+      position: relative;
+      width: 100%;
+      left: 0;
+    }
   }
 }

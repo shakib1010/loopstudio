@@ -1,24 +1,32 @@
+@use "../abstract/" as *;
 .revealing-img {
   position: relative;
-  height: 100rem;
+  height: 100vh;
   width: 100%;
-  text-align: right;
   overflow: hidden;
-  margin-bottom: 31rem;
+  margin-bottom: 25rem;
+
+  @include respond(tab-land) {
+    margin-bottom: 10rem;
+  }
+  
+  @include respond(tab-port) {
+    margin-bottom: 5rem;
+  }
+  
 
   &__box {
     position: absolute;
-    left: 50%;
+    left: 100%;
+    @include respond(tab-port) {
+      left: 0;
+    }
     top: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
     transition: all 0.3s ease;
     cursor: pointer;
-  }
-
-  &__box:hover {
-    left: 10%;
   }
 
   &__img {

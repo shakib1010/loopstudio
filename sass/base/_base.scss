@@ -1,3 +1,5 @@
+@use "../abstract/" as *;
+
 *,
 ::before,
 ::after {
@@ -8,6 +10,14 @@
 
 html {
   font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%
+  }
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -16,5 +26,6 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   color: #2f2f2f;
+  overflow-x: hidden;
   // padding: 3rem;
 }

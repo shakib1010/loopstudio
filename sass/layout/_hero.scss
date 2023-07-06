@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   padding: 21rem 0;
-
+  height: 100vh;
   @include respond(phone) {
     padding: 15rem 1rem 10rem 1rem;
   }
@@ -19,9 +19,9 @@
       line-height: 1;
 
       div:not(:last-child) {
-          @include respond(tab-port) {
-            margin-bottom: 1rem;
-          }
+        @include respond(tab-port) {
+          margin-bottom: 1rem;
+        }
       }
 
       @include respond(tab-land) {
@@ -30,7 +30,8 @@
       }
 
       @include respond(phone) {
-        font-size: 5rem;
+        font-size: 6rem;
+        line-height: 0.9;
       }
 
       span img {
@@ -45,9 +46,9 @@
           left: 0;
           margin-bottom: 1rem;
         }
-        
+
         @include respond(phone) {
-          height: 30px;
+          height: 35px;
         }
       }
     }
@@ -55,12 +56,17 @@
 
   &__para {
     position: absolute;
-    
     top: 43.5%;
     right: -10%;
     line-height: 1.2;
     width: 30%;
     font-size: 1.4rem;
+    overflow: hidden;
+
+    .line {
+      overflow: hidden;
+    }
+
     @include respond(tab-land) {
       right: -35%;
       width: 50%;
@@ -71,5 +77,15 @@
       width: 100%;
       left: 0;
     }
+
+    @include respond(phone) {
+      width: 60%;
+      margin: 2rem auto;
+    }
   }
+}
+
+.h-main,
+.h-sub {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 85%);
 }

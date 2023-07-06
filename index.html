@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LoopStudio</title>
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="dist/css/index.css" />
     <!-- <link rel="stylesheet" href="sass/index.css" /> -->
   </head>
   <body>
@@ -63,7 +63,9 @@
           <span>
             <img src="images/logoxx.svg" alt="logo" class="img" />
           </span>
+
           <div class="h-sub">Through VR</div>
+
           <p class="hero__para">
             &nbsp LOOPSTUDIOS provides AI to experience the world through VR
             devices.
@@ -73,12 +75,15 @@
     </header>
 
     <section class="revealing-img">
+      <div class="revealing-img-mask"></div>
       <div class="revealing-img__box">
-        <img
-          src="images/HD/HEO.jpg"
-          alt="hero-img"
-          class="revealing-img__img"
-        />
+        <div class="revealing-img__box">
+          <img
+            src="images/HD/HEO.jpg"
+            alt="hero-img"
+            class="revealing-img__img"
+          />
+        </div>
       </div>
     </section>
 
@@ -104,7 +109,7 @@
 
     <section class="advertisement">
       <div class="advertisement__info">
-        <h2 class="advertisement__title u-margin-bottom-small">
+        <h2 class="advertisement__head u-margin-bottom-small">
           Our <br />
           Creations
         </h2>
@@ -138,10 +143,7 @@
             />
 
             <div class="advertisement__caption">
-              <p>
-                Pocket <br />
-                Borealis
-              </p>
+              <p>Pocket Borealis</p>
             </div>
           </div>
         </div>
@@ -236,7 +238,7 @@
       </div>
     </section>
 
-    <!-- <section class="about">
+    <section class="about">
       <div class="about__info">
         <h2 class="u-margin-bottom-small">
           Our <br />
@@ -261,8 +263,8 @@
           <h3>BUILDING CYBORGS WITH HUMAN BRAIN</h3>
         </div>
       </div>
-    </section> -->
-<!-- 
+    </section>
+
     <section class="footer">
       <div class="footer__info">
         <img
@@ -308,7 +310,7 @@
           islam
         </p>
       </div>
-    </section> -->
+    </section>
 
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>

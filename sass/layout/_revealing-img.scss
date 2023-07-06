@@ -6,18 +6,21 @@
   overflow: hidden;
   margin-bottom: 25rem;
 
+  display: flex;
+  flex-wrap: nowrap;
+
   @include respond(tab-land) {
     margin-bottom: 10rem;
+    height: 40rem;
   }
-  
+
   @include respond(tab-port) {
     margin-bottom: 5rem;
   }
-  
 
   &__box {
     position: absolute;
-    left: 100%;
+    // left: 100%;
     @include respond(tab-port) {
       left: 0;
     }
@@ -29,7 +32,76 @@
     cursor: pointer;
   }
 
+  &-mask {
+    background-color: #fff;
+    height: 100vh;
+    width: 50vw;
+    z-index: 555;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include respond(tab-port) {
+      left: -50%;
+    }
+  }
+
   &__img {
     max-width: 100%;
+  }
+}
+
+html {
+  overflow-y: scroll;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
+
+body {
+  overflow-y: hidden;
+  position: relative;
+  height: unset;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.container {
+  width: 400%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: yellow;
+}
+
+.lastContainer {
+  display: flex;
+  height: 100vh;
+  background: yellow;
+}
+
+.panel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.one {
+  background-color: red;
+}
+
+.two {
+  img {
+    width: 100%;
   }
 }

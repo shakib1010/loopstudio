@@ -34,6 +34,10 @@
     margin: 0 auto;
     position: relative;
     left: 25%;
+
+    @include respond(tab-port) {
+      left: 0;
+    }
   }
 }
 

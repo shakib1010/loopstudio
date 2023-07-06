@@ -9,10 +9,22 @@
   gap: 20rem;
   padding: 21rem 0 5rem 0;
 
+  @include respond(tab-port) {
+    // padding: 3rem 0 30rem 20px;
+  }
+
   &__info {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    &-logo {
+      width: 100%;
+
+      @include respond(phone) {
+        width: 60%;
+      }
+    }
   }
 
   &__info-text {
@@ -20,11 +32,21 @@
     justify-content: center;
     position: relative;
 
+    @include respond(phone) {
+      display: block;
+      text-align: center;
+    }
+
     h1 {
       text-align: start;
       font-size: 6.4rem;
       line-height: 1;
       color: $white;
+
+      @include respond(phone) {
+        font-size: 3.5rem;
+        text-align: center;
+      }
     }
 
     p {
@@ -35,6 +57,14 @@
       left: 45%;
       font-size: 1.4rem;
       color: $white;
+
+      @include respond(phone) {
+        position: relative;
+        width: 60%;
+        left: 0;
+        margin: 0 auto;
+        margin-top: 2rem;
+      }
     }
   }
 
@@ -93,6 +123,11 @@
 
     p {
       color: $white;
+      width: 60%;
+      margin: 0 auto;
+      line-height: 1.5;
+      text-align: center;
+      font-size: 1.4rem;
     }
   }
 
@@ -101,5 +136,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    img {
+      @include respond(phone) {
+        width: 1.5rem;
+      }
+    }
   }
 }

@@ -3,6 +3,10 @@
   @extend %container;
 
   padding: 21rem 0 21rem 0;
+
+  @include respond(tab-port) {
+    padding: 0rem 0 21rem 0;
+  }
   &__info {
     @include subtitle;
     text-align: center;
@@ -16,6 +20,22 @@
     display: flex;
     gap: 3rem;
     flex-direction: column;
+    @include respond(tab-port) {
+      padding: 30px 30px;
+    }
+
+    @include respond(phone) {
+      padding: 15px 15px;
+    }
+
+    h3 {
+      @include respond(tab-port) {
+        font-size: 2rem;
+      }
+      @include respond(phone) {
+        font-size: 3rem;
+      }
+    }
 
     &-box {
       max-width: 1356px;
@@ -31,6 +51,10 @@
       align-items: center;
       padding: 60px 0 60px 40px;
       border-radius: 1rem;
+
+      @include respond(tab-port) {
+        padding: 30px 0 30px 20px;
+      }
     }
   }
 }

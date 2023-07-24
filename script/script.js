@@ -26,3 +26,19 @@ navCloseBtn.addEventListener("click", () => {
   navCloseBtn.classList.remove("nav-show")
   navCloseBtn.classList.add("nav-hide")
 })
+
+
+// POPUP CLOSE FUNCTIONALITY
+const popupCloseBtn = document.getElementById("popup-close");
+const signupBtn = document.getElementById("popup-open-btn");
+const popup = document.getElementById("popup");
+
+console.log(popupCloseBtn)
+
+signupBtn.addEventListener("click", () => {
+  popup.classList.add("active");
+})
+
+popupCloseBtn.addEventListener("click", () => {
+  popup.classList.remove("active");
+})

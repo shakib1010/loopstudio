@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LoopStudio</title>
     <link rel="stylesheet" href="dist/css/index.css" />
-    <!-- <link rel="stylesheet" href="sass/index.css" /> -->
   </head>
   <body>
-    <div class="boltu"></div>
+    <!-- <div class="nav container"> -->
+
+    <!-- </div> -->
+
     <nav class="header">
       <div class="nav">
         <div class="nav__logo-box">
@@ -74,15 +76,36 @@
       </div>
     </header>
 
-    <section class="revealing-img">
+    <section id="section-reveling-img" class="revealing-img">
       <div class="revealing-img-mask"></div>
       <div class="revealing-img__box">
-        <div class="revealing-img__box">
-          <img
-            src="images/HD/HEO.jpg"
-            alt="hero-img"
-            class="revealing-img__img"
-          />
+        <img
+          src="images/HD/HEO.jpg"
+          alt="hero-img"
+          class="revealing-img__img"
+        />
+        <a href="#section-reveling-img" id="popup-open-btn" class="revealing-img__btn btn btn-primary">Sign up</a>
+      </div>
+    </section>
+
+    <!-- Popup Form -->
+    <section id="popup" class="popup">
+      <div id="popup-close" class="popup__close-btn">X</div>
+      <div class="popup__content">
+        <h2 class="popup__title">Get update on your email</h2>
+        <div class="footer__email-box popup__mail-box">
+          <form action="#" class="footer__form popup__form">
+            <input
+            type="email"
+            name="mail"
+            id="f-email"
+            placeholder="Subscribe to newse letter"
+            class="footer__input popup__input"
+            />
+            <button type="submit" class="footer__form-btn popup__form-btn">
+              <img src="images/Arrow 3.svg" alt="" />
+            </button>
+          </form>
         </div>
       </div>
     </section>

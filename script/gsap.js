@@ -57,11 +57,12 @@ mm.add("(min-width: 900px)", () => {
   gsap.to(".revealing-img-mask", {
     scrollTrigger: {
       trigger: ".revealing-img",
-      start: "top center",
-      end: "70% 30%",
+      start: "top bottom",
+      end: "top top",
       scrub: 5,
+      once: true,
     },
-    left: "-50%",
+    width: 0,
   })
 
   // Advertisement section animation
@@ -71,6 +72,7 @@ mm.add("(min-width: 900px)", () => {
     scrollTrigger: {
       trigger: ".advertisement__img-box",
       toggleActions: "restart none none none",
+      once: true,
     },
     opacity: 0,
     y: 400,

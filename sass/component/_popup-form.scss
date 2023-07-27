@@ -1,0 +1,51 @@
+@use '../abstract/' as *;
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5000;
+  padding: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba($white, 0.4);
+  backdrop-filter: blur(30px);
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.07);
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &__close-btn {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+    font-weight: bolder;
+    font-size: 4rem;
+    cursor: pointer;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 4rem;
+  }
+
+  &__mail-box {
+    width: 60rem !important;
+  }
+
+  &.active {
+    width: 80vw;
+    height: 80vh;
+    visibility: visible;
+  }
+}

@@ -1,11 +1,11 @@
-@use "../abstract/" as *;
+@use '../abstract/' as *;
+
 .revealing-img {
   position: relative;
   height: 100vh;
   width: 100%;
   overflow: hidden;
   margin-bottom: 25rem;
-
   display: flex;
   flex-wrap: nowrap;
 
@@ -24,6 +24,7 @@
     @include respond(tab-port) {
       left: 0;
     }
+
     top: 0;
     width: 100%;
     height: 100%;
@@ -33,11 +34,11 @@
   }
 
   &-mask {
+    position: absolute;
     background-color: #fff;
     height: 100vh;
-    width: 50vw;
+    width: 80vw;
     z-index: 555;
-    position: absolute;
     top: 0;
     left: 0;
     @include respond(tab-port) {
@@ -47,6 +48,24 @@
 
   &__img {
     max-width: 100%;
+  }
+
+  &__btn {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 111;
+    padding: 1.5rem 5rem;
+    font-size: 2.4rem;
+    text-decoration: none;
+    background-color: rgba(217, 217, 217, 0.7);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.07);
+    color: #fff;
+    font-weight: bold;
+    text-transform: capitalize;
   }
 }
 

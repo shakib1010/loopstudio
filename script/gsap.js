@@ -14,7 +14,7 @@ mm.add("(min-width: 900px)", () => {
   heroTl
     .from(".img", { x: -200, opacity: 0 })
     .from(".h-main", {
-      duration: 0.8,
+      duration: 0.4,
       rotationX: -90,
       transformOrigin: "bottom",
       z: -400,
@@ -23,7 +23,7 @@ mm.add("(min-width: 900px)", () => {
       hMain.chars,
       {
         y: 120,
-        duration: 0.8,
+        duration: 0.4,
         rotationX: -90,
         transformOrigin: "bottom",
         stagger: 0.02,
@@ -31,7 +31,7 @@ mm.add("(min-width: 900px)", () => {
       "<"
     )
     .from(".h-sub", {
-      duration: 0.8,
+      duration: 0.4,
       rotationX: -90,
       transformOrigin: "bottom",
       z: -400,
@@ -40,7 +40,7 @@ mm.add("(min-width: 900px)", () => {
       hSub.chars,
       {
         y: 120,
-        duration: 0.8,
+        duration: 0.4,
         rotationX: -90,
         transformOrigin: "bottom",
         stagger: 0.02,
@@ -50,7 +50,7 @@ mm.add("(min-width: 900px)", () => {
     .from(hPara.lines, { y: 100, stagger: 0.05 })
     .from(".header", {
       y: -300,
-      duration: 1,
+      duration: 0.4,
     })
 
   // Scroll trigger
@@ -76,11 +76,11 @@ mm.add("(min-width: 900px)", () => {
     },
     opacity: 0,
     y: 400,
+    ease: Power3.easeInOut,
     stagger: {
       each: 0.2,
-      from: "random",
+      // from: "random",
     },
-    ease: Power3.easeOut,
   })
 
   gsap.from(".advertisement__head", {
